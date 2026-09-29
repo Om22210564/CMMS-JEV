@@ -1,0 +1,9 @@
+case_id,input_wo_id,expected_decision,rationale,difficulty
+C-001,WO-021,MECHANICAL,"Description: 'Puddle of hydraulic fluid forming under the main reservoir.' (Requires inferring fluid leaks are mechanical/fluid-power issues).",MEDIUM
+C-002,WO-022,ELECTRICAL,"Description: 'Drive unit trips after 20 minutes of operation. Motor casing unusually hot.' (Tripping and heat imply electrical overload).",HARD
+C-003,WO-023,INSTRUMENTATION,"Description: 'SCADA screen showing erratic jumping values for cooling water flow, but physical flow looks steady.' (Points to a faulty sensor/transmitter, not the physical pump).",HARD
+C-004,WO-024,MECHANICAL,"Description: 'Loud whining noise coming from the drive end of the conveyor.' (Whining at a drive end implies bearing or gearbox mechanical failure).",MEDIUM
+C-005,WO-025,ELECTRICAL,"Description: 'Acrid burning smell near the MCC panel when Line 2 starts.' (Burning smell near a control center is a classic electrical fault).",MEDIUM
+C-006,WO-026,MECHANICAL,"Description: 'Press won't reach full tonnage. Drifts down when held under load.' (Implies a mechanical/hydraulic bypass or seal leak).",HARD
+C-007,WO-027,INSTRUMENTATION,"Description: 'Robot arm moving past its home limit switch without stopping.' (Limit switch failure is an instrumentation/control issue).",MEDIUM
+C-008,WO-028,GENERAL,"Description: 'Air line hissing near the packaging cell.' (Pneumatic leaks typically route to general/facilities unless severe).",EASY

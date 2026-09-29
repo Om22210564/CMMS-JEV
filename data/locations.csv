@@ -1,0 +1,17 @@
+location_id,plant_id,area,line,location_name,location_type
+LOC-ASM-01,PLANT-001,Assembly,Assembly Line 01,Assembly Line 01,PRODUCTION_LINE
+LOC-ASM-02,PLANT-001,Assembly,Assembly Line 02,Assembly Line 02,PRODUCTION_LINE
+LOC-ASM-03,PLANT-001,Assembly,Assembly Line 03,Assembly Line 03,PRODUCTION_LINE
+LOC-ASM-04,PLANT-001,Assembly,Assembly Line 04,Assembly Line 04,PRODUCTION_LINE
+LOC-MCH-01,PLANT-001,Machining,Machining Line 01,Machining Line 01,PRODUCTION_LINE
+LOC-MCH-02,PLANT-001,Machining,Machining Line 02,Machining Line 02,PRODUCTION_LINE
+LOC-MCH-03,PLANT-001,Machining,Machining Line 03,Machining Line 03,PRODUCTION_LINE
+LOC-FAB-01,PLANT-001,Fabrication,Fabrication Line 01,Fabrication Line 01,PRODUCTION_LINE
+LOC-FAB-02,PLANT-001,Fabrication,Fabrication Line 02,Fabrication Line 02,PRODUCTION_LINE
+LOC-PKG-01,PLANT-001,Packaging,Packaging Line 01,Packaging Line 01,PRODUCTION_LINE
+LOC-PKG-02,PLANT-001,Packaging,Packaging Line 02,Packaging Line 02,PRODUCTION_LINE
+LOC-PKG-03,PLANT-001,Packaging,Packaging Line 03,Packaging Line 03,PRODUCTION_LINE
+LOC-UTL-01,PLANT-001,Utilities,Pump Station A,Utility Pump Station,UTILITY_AREA
+LOC-UTL-02,PLANT-001,Utilities,Compressor Room,Air Compressor Room,UTILITY_AREA
+LOC-WH-01,PLANT-001,Warehouse,Main Stores,Central Warehouse,MAIN_STORES
+LOC-WH-02,PLANT-001,Warehouse,Maintenance Stores,MRO Parts Room,MAINTENANCE_STORES

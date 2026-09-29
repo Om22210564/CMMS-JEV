@@ -1,0 +1,11 @@
+pr_id,created_at,requested_by,reason,status
+PR-001,2025-01-11T08:00:00,SYSTEM,"Inventory Replenishment (Low Stock - P-102)",CONVERTED_TO_PO
+PR-002,2025-01-02T10:00:00,SYSTEM,"Inventory Replenishment (Low Stock - P-201)",CONVERTED_TO_PO
+PR-003,2025-01-05T09:15:00,SYSTEM,"Inventory Replenishment (Low Stock - P-302)",CONVERTED_TO_PO
+PR-004,2025-01-15T14:30:00,TECH-004,"Need specialized VFD keypad (P-1302)",APPROVED
+PR-005,2025-01-16T08:00:00,SYSTEM,"Inventory Replenishment (Low Stock - P-402)",CONVERTED_TO_PO
+PR-006,2025-01-18T11:00:00,SYSTEM,"Inventory Replenishment (Low Stock - P-1202)",SUBMITTED
+PR-007,2025-01-19T09:00:00,MGR-001,"Bulk order for upcoming shutdown (P-501, P-502)",CONVERTED_TO_PO
+PR-008,2025-01-20T10:00:00,SYSTEM,"Inventory Replenishment (Low Stock - P-802)",DRAFT
+PR-009,2025-01-22T08:30:00,SYSTEM,"Inventory Replenishment (Low Stock - P-601)",CONVERTED_TO_PO
+PR-010,2025-01-24T14:00:00,TECH-006,"Replacement cables for CNC rewire",REJECTED

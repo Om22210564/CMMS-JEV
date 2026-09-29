@@ -1,0 +1,21 @@
+pm_plan_id,asset_id,pm_topic,description,interval_days,required_materials,responsible_team,active
+PM-001,CP-400,vibration inspection,Monthly vibration and temperature check on pump bearings,30,"[]",TEAM-MECH,true
+PM-002,CP-401,vibration inspection,Monthly vibration and temperature check on pump bearings,30,"[]",TEAM-MECH,true
+PM-003,COMP-01,filter replacement,Replace air intake filters quarterly,90,"[""P-202""]",TEAM-GEN,true
+PM-004,CONV-01,lubrication,Bi-weekly lubrication of conveyor drive chain,14,"[""P-502""]",TEAM-GEN,true
+PM-005,VFD-01,electrical panel inspection,Inspect VFD panel for dust and loose connections,60,"[""P-1402""]",TEAM-ELEC,true
+PM-006,CNC-01,lubrication,Check and top up way oil,7,"[""P-501""]",TEAM-GEN,true
+PM-007,PR-01,hydraulic system inspection,Check hydraulic filter and fluid level,30,"[""P-201""]",TEAM-MECH,true
+PM-008,HPU-01,hydraulic system inspection,Complete HPU diagnostic and leak check,60,"[]",TEAM-MECH,true
+PM-009,PKG-01,pneumatic system inspection,Check pneumatic cylinders and valves for leaks,30,"[]",TEAM-MECH,true
+PM-010,GB-01,gearbox inspection,Check gearbox oil level and temperature,30,"[""P-1101""]",TEAM-MECH,true
+PM-011,TRF-01,electrical panel inspection,Thermographic scan of main transformer connections,180,"[]",TEAM-ELEC,true
+PM-012,MCC-01,electrical panel inspection,Check contactors and tighten terminals,90,"[""P-1402""]",TEAM-ELEC,true
+PM-013,PT-01,sensor calibration,Calibrate compressor discharge pressure transmitter,180,"[]",TEAM-INST,true
+PM-014,TT-01,sensor calibration,Verify cooling water temperature sensor reading,180,"[]",TEAM-INST,true
+PM-015,ROB-01,lubrication,Lubricate robot arm joints,30,"[""P-502""]",TEAM-GEN,true
+PM-016,CP-402,vibration inspection,Quarterly check on standby chilled water pump,90,"[]",TEAM-MECH,true
+PM-017,CONV-02,lubrication,Bi-weekly lubrication of conveyor drive chain,14,"[""P-502""]",TEAM-GEN,true
+PM-018,CNC-02,lubrication,Check and top up way oil,7,"[""P-501""]",TEAM-GEN,true
+PM-019,PKG-02,pneumatic system inspection,Check pneumatic cylinders and valves for leaks,30,"[]",TEAM-MECH,true
+PM-020,GB-02,gearbox inspection,Check gearbox oil level and temperature,30,"[""P-1101""]",TEAM-MECH,true

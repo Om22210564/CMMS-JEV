@@ -1,0 +1,5 @@
+case_id,input_inspection_id,expected_decision,rationale,difficulty
+ID-010,INSP-020,NO_ACTION_NEEDED,"Finding: 'Slight discoloration on hydraulic fluid, but within operating viscosity limits.' (Normal wear, does not require a WO).",MEDIUM
+ID-011,INSP-021,REQUIRES_WORK_ORDER,"Finding: 'Thermal scan shows phase B terminal is 40C hotter than A and C.' (Asymmetric heat on 3-phase power is a critical failure indicator).",HARD
+ID-012,INSP-022,MONITOR,"Finding: 'Vibration up 0.1 mm/s from baseline, still well within normal tolerance zone.' (Trend is slightly up but strictly normal, flag to monitor, no WO).",HARD
+ID-013,INSP-023,REQUIRES_WORK_ORDER,"Finding: 'Metal shavings found in gearbox oil sample.' (Metal in oil means active destructive wear, urgent WO needed).",MEDIUM

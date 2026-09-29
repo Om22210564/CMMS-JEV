@@ -1,0 +1,6 @@
+case_id,work_order_id,candidate_item_id,expected_decision,rationale,difficulty
+SR-010,WO-090,P-102,RELEVANT,"WO: 'Replace 6205 bearing'. Part: '6205-2RS Sealed Bearing' (Exact match).",EASY
+SR-011,WO-090,P-103,NOT_RELEVANT,"WO: 'Replace 6205 bearing'. Part: '6305-2RS Sealed Bearing' (Looks similar but 6305 is a different physical size series than 6205).",HARD
+SR-012,WO-091,P-501,RELEVANT,"WO: 'Top up way oil on CNC'. Part: 'AW68 Hydraulic Oil' (Semantic knowledge: AW68 is often used as machine lubricant/way oil).",MEDIUM
+SR-013,WO-092,P-1201,NOT_RELEVANT,"WO: 'Fix snapped grid coupling on CP-400'. Part: 'L90 Jaw Coupling Element' (Both are couplings but jaw and grid are completely different mechanical types).",HARD
+SR-014,WO-093,P-301,RELEVANT,"WO: 'Replace snapped limit switch on conveyor'. Part: '12mm Proximity Sensor' (Semantic knowledge: proximity sensors are used interchangeably with limit switches in modern automation).",HARD

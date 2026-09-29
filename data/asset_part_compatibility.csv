@@ -1,0 +1,13 @@
+item_id,asset_type,asset_model,compatibility_status
+P-102,centrifugal pump,CM-500,COMPATIBLE
+P-103,centrifugal pump,CM-600,COMPATIBLE
+P-104,centrifugal pump,CM-500,CONDITIONAL
+P-601,centrifugal pump,CM-500,COMPATIBLE
+P-602,centrifugal pump,CM-600,COMPATIBLE
+P-1201,centrifugal pump,CM-500,COMPATIBLE
+P-401,VFD,VFD-10K,COMPATIBLE
+P-1302,VFD,VFD-10K,COMPATIBLE
+P-201,hydraulic power unit,HPU-200,COMPATIBLE
+P-301,conveyor,MT-Belt-X,COMPATIBLE
+P-701,conveyor,MT-Belt-X,COMPATIBLE
+P-1101,gearbox,GB-10,COMPATIBLE

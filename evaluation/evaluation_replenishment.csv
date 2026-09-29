@@ -1,0 +1,4 @@
+case_id,item_id,expected_decision,rationale,difficulty
+REP-001,P-102,REQUIRES_ATTENTION,'QOH (2) < Reorder (5). Active WO-002 demand. Critical asset.',HARD
+REP-002,P-202,MONITOR,'QOH (8) > Reorder (6). But 2 reserved for MR-003 (available = 6). Borderline monitor.',MEDIUM
+REP-003,P-401,HEALTHY,'QOH (50) >> Reorder (20). No risk.',EASY

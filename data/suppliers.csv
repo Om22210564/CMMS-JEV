@@ -1,0 +1,7 @@
+supplier_id,supplier_name,category,lead_time_days,active
+SUP-001,Nova Bearings & Drives,MECHANICAL,14,true
+SUP-002,Vertex Electrical Components,ELECTRICAL,7,true
+SUP-003,Prime Pneumatics & Fluid,MECHANICAL,10,true
+SUP-004,Apex Industrial Supplies,CONSUMABLE,3,true
+SUP-005,Meridian Motion Systems,MECHANICAL,21,true
+SUP-006,SenseTech Instrumentation,INSTRUMENTATION,14,true

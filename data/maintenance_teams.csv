@@ -1,0 +1,5 @@
+team_id,team_name,description
+TEAM-MECH,Mechanical Team,"Handles mechanical repairs and rotating equipment"
+TEAM-ELEC,Electrical Team,"Handles power, wiring, and electrical drives"
+TEAM-INST,Instrumentation Team,"Handles sensors, PLCs, and control loops"
+TEAM-GEN,General Maintenance,"Handles facilities, pneumatics, and basic PMs"

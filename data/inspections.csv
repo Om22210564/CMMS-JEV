@@ -1,0 +1,6 @@
+inspection_id,asset_id,pm_execution_id,inspection_type,performed_at,performed_by,finding,measurement,measurement_unit,severity,status
+INSP-001,CP-400,PME-100,VIBRATION_INSPECTION,2025-01-10T08:30:00,TECH-001,Vibration level increased compared with previous inspection. Abnormal noise.,8.7,mm/s,MAJOR,NEEDS_ACTION
+INSP-002,CONV-01,PME-101,VISUAL_INSPECTION,2025-01-11T10:15:00,TECH-008,Belt tracking normally. Lubrication applied.,, ,NORMAL,CLOSED
+INSP-003,VFD-01,PME-102,ELECTRICAL_INSPECTION,2025-01-14T09:00:00,TECH-004,Dust accumulation on heat sink. Fans operating normally.,, ,MINOR,CLOSED
+INSP-004,PR-01,PME-104,HYDRAULIC_INSPECTION,2025-01-16T14:30:00,TECH-002,Slight weeping from main cylinder rod seal. Needs monitoring.,, ,MODERATE,NEEDS_ACTION
+INSP-005,TRF-01,PME-105,ELECTRICAL_INSPECTION,2025-01-22T10:00:00,TECH-006,Hot spot detected on phase B secondary terminal.,85,C,CRITICAL,NEEDS_ACTION

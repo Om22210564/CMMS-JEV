@@ -1,0 +1,3 @@
+case_id,input_wo_id,expected_decision,rationale,difficulty
+R-001,WO-002,TEAM-MECH,'Mechanical classification directly maps to the Mechanical Team handling rotating equipment.',EASY
+R-002,WO-005,TEAM-ELEC,'Electrical motor fault maps to Electrical Team.',EASY

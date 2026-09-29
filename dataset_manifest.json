@@ -1,0 +1,25 @@
+{
+  "generation_date": "2026-09-29T22:10:00Z",
+  "dataset_version": "2.0.0",
+  "random_seed": 42,
+  "schema_version": "1.0",
+  "record_counts": {
+    "locations": 16,
+    "assets": 30,
+    "teams": 4,
+    "managers": 3,
+    "technicians": 10,
+    "suppliers": 6,
+    "inventory_items": 30,
+    "work_orders": 150,
+    "pm_plans": 20,
+    "pm_executions": 45,
+    "inspections": 50,
+    "material_requests": 50,
+    "material_issues": 50,
+    "purchase_requests": 40,
+    "purchase_orders": 35,
+    "material_receipts": 30,
+    "maintenance_history": 130
+  }
+}

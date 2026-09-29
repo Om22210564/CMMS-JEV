@@ -1,0 +1,5 @@
+request_id,work_order_id,item_id,location_id,reason,requested_at,requested_by,approved_at,approved_by,issued_to,quantity_requested,quantity_approved,quantity_issued,status
+MR-001,WO-002,P-102,LOC-WH-01,Needed for pump bearing replacement,2025-01-11T07:00:00,TECH-001,2025-01-11T07:15:00,MGR-001,TECH-001,1,1,1,APPROVED
+MR-002,WO-002,P-103,LOC-WH-01,Wrong bearing requested initially,2025-01-11T07:05:00,TECH-001,,,,1,0,0,REJECTED
+MR-003,WO-013,P-202,LOC-WH-01,Quarterly compressor filter change,2025-01-21T08:30:00,TECH-008,2025-01-21T08:45:00,MGR-001,TECH-008,2,2,2,APPROVED
+MR-004,WO-011,P-401,LOC-WH-01,Main fuses blown on CNC panel,2025-01-19T07:30:00,TECH-006,2025-01-19T07:45:00,MGR-001,TECH-006,3,3,3,APPROVED

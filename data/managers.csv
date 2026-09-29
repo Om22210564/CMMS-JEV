@@ -1,0 +1,4 @@
+manager_id,name,department,active
+MGR-001,Anil Kulkarni,Maintenance,true
+MGR-002,Priya Sharma,Procurement,true
+MGR-003,Rajeev Menon,Operations,true

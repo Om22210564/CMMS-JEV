@@ -1,0 +1,5 @@
+entity,field,description,data_type,allowed_values,example
+WorkOrder,status,Current lifecycle state,STRING,"OPEN, IN_PROGRESS, ON_HOLD, COMPLETED, CANCELLED",IN_PROGRESS
+Asset,operating_status,Current physical state,STRING,"RUNNING, STOPPED, UNDER_MAINTENANCE, OUT_OF_SERVICE",RUNNING
+AssetPartCompatibility,compatibility_status,Technical fit,STRING,"COMPATIBLE, NOT_COMPATIBLE, CONDITIONAL",COMPATIBLE
+InventoryItem,stock_type,Inventory tracking rule,STRING,"INVENTORY, NON_INVENTORY",INVENTORY

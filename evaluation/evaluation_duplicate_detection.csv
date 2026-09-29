@@ -1,0 +1,7 @@
+case_id,input_wo_id_1,input_wo_id_2,expected_decision,rationale,difficulty
+D-010,WO-030,WO-031,DUPLICATE,"WO-030: 'Pump CP-400 shaking badly.' WO-031: 'Abnormal vibration on cooling water pump A.' (Same asset, same time, semantic match).",EASY
+D-011,WO-040,WO-041,NOT_DUPLICATE,"WO-040: 'Conveyor 1 belt slipping.' WO-041: 'Conveyor 1 proximity sensor snapped off.' (Same asset, same time, completely DIFFERENT problems).",HARD
+D-012,WO-050,WO-051,NOT_DUPLICATE,"WO-050: 'VFD-01 tripped on overcurrent.' (Jan 15). WO-051: 'VFD-01 tripped on overcurrent.' (Mar 10). (Same asset, same problem, but DIFFERENT dates - recurring issue; not a duplicate).",MEDIUM
+D-013,WO-060,WO-061,DUPLICATE,"WO-060: 'Hydraulic press losing pressure.' WO-061: 'Press won't hold tonnage.' (Same asset, same time, completely different vocabulary meaning the same physical failure).",HARD
+D-014,WO-070,WO-071,NOT_DUPLICATE,"WO-070: 'Chilled water pump leaking.' WO-071: 'Cooling water pump leaking.' (Same problem, same time, DIFFERENT assets - CP-400 vs CP-402).",MEDIUM
+D-015,WO-080,WO-081,NOT_DUPLICATE,"WO-080: 'Main compressor running hot.' WO-081: 'Main compressor making loud knocking sound.' (Same asset, same time, but potentially distinct failures requiring different parts/skills).",HARD

@@ -1,0 +1,11 @@
+technician_id,name,team_id,current_workload,skills
+TECH-001,Rahul Deshmukh,TEAM-MECH,2,"[""pumps"",""bearings"",""rotating_equipment""]"
+TECH-002,Vikram Patil,TEAM-MECH,1,"[""hydraulics"",""pneumatics"",""gearboxes""]"
+TECH-003,Suresh Kumar,TEAM-MECH,3,"[""welding"",""fabrication""]"
+TECH-004,Neha Joshi,TEAM-ELEC,0,"[""VFD"",""motors"",""MCC""]"
+TECH-005,Amit Verma,TEAM-INST,1,"[""sensors"",""calibration"",""PLC""]"
+TECH-006,Pooja Desai,TEAM-ELEC,2,"[""transformers"",""wiring""]"
+TECH-007,Ravi Singh,TEAM-INST,1,"[""instrumentation"",""flow_meters""]"
+TECH-008,Kiran Rao,TEAM-GEN,0,"[""lubrication"",""filters""]"
+TECH-009,Manoj Tiwari,TEAM-GEN,1,"[""facilities"",""HVAC""]"
+TECH-010,Deepak Chawla,TEAM-MECH,1,"[""CNC"",""precision_mechanics""]"
