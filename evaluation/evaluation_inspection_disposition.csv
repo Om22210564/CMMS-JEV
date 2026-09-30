@@ -1,5 +1,31 @@
 case_id,input_inspection_id,expected_decision,rationale,difficulty
-ID-010,INSP-020,NO_ACTION_NEEDED,"Finding: 'Slight discoloration on hydraulic fluid, but within operating viscosity limits.' (Normal wear, does not require a WO).",MEDIUM
-ID-011,INSP-021,REQUIRES_WORK_ORDER,"Finding: 'Thermal scan shows phase B terminal is 40C hotter than A and C.' (Asymmetric heat on 3-phase power is a critical failure indicator).",HARD
-ID-012,INSP-022,MONITOR,"Finding: 'Vibration up 0.1 mm/s from baseline, still well within normal tolerance zone.' (Trend is slightly up but strictly normal, flag to monitor, no WO).",HARD
-ID-013,INSP-023,REQUIRES_WORK_ORDER,"Finding: 'Metal shavings found in gearbox oil sample.' (Metal in oil means active destructive wear, urgent WO needed).",MEDIUM
+ID-010,INSP-020,REQUIRES_WORK_ORDER,"Elevated return-filter differential and falling HPU fluid level indicate an active hydraulic condition.",HARD
+ID-011,INSP-021,REQUIRES_WORK_ORDER,"The transmitter signal varies while the physical compressor gauge is steady.",HARD
+ID-012,INSP-022,NO_ACTION_NEEDED,"The temperature sensor agrees with the local reference despite the reported hot reading.",HARD
+ID-013,INSP-023,NO_ACTION_NEEDED,"The flow meter agrees with a portable reference and the process flow is steady.",MEDIUM
+ID-014,INSP-001,REQUIRES_WORK_ORDER,"Pump vibration is elevated and abnormal noise is present.",EASY
+ID-015,INSP-002,NO_ACTION_NEEDED,"Belt tracking and lubrication are normal.",EASY
+ID-016,INSP-003,MONITOR,"Minor heat-sink dust is present while VFD fans operate normally.",MEDIUM
+ID-017,INSP-004,MONITOR,"Slight cylinder-seal weeping needs observation before a full repair.",MEDIUM
+ID-018,INSP-005,REQUIRES_WORK_ORDER,"A transformer terminal hot spot is critical electrical evidence.",EASY
+ID-019,INSP-006,NO_ACTION_NEEDED,"Post-service compressor visual checks show no defect.",EASY
+ID-020,INSP-007,NO_ACTION_NEEDED,"CNC lubrication level and oil film are acceptable.",EASY
+ID-021,INSP-008,MONITOR,"The oil film is thin at one travel limit but remains present.",MEDIUM
+ID-022,INSP-009,REQUIRES_WORK_ORDER,"Held-load pressure decay and a visible rod-seal film show a hydraulic repair need.",EASY
+ID-023,INSP-010,NO_ACTION_NEEDED,"Packaging pneumatics cycle smoothly with no leak.",EASY
+ID-024,INSP-011,MONITOR,"Gearbox temperature is near the upper normal band with no noise or oil-level defect.",HARD
+ID-025,INSP-012,REQUIRES_WORK_ORDER,"Thermal discoloration on one MCC phase is a critical asymmetric condition.",EASY
+ID-026,INSP-013,REQUIRES_WORK_ORDER,"Wear on the robot home target can compromise repeatable position feedback.",HARD
+ID-027,INSP-014,NO_ACTION_NEEDED,"Conveyor tracking and chain lubrication are normal under load.",EASY
+ID-028,INSP-015,NO_ACTION_NEEDED,"CNC lubrication lines and way covers are intact.",EASY
+ID-029,INSP-016,MONITOR,"The packaging cylinder is slower but sealing and pressure are stable.",MEDIUM
+ID-030,INSP-017,MONITOR,"Pump vibration is close to the monitoring band while temperature remains acceptable.",HARD
+ID-031,INSP-018,NO_ACTION_NEEDED,"Reported roughness is not supported by the within-tolerance vibration reading.",HARD
+ID-032,INSP-019,MONITOR,"VFD dust requires planned cleaning but terminals and heat marks are normal.",MEDIUM
+ID-033,INSP-024,NO_ACTION_NEEDED,"Motor heat wording is misleading because thermography is below alarm and currents are balanced.",HARD
+ID-034,INSP-025,NO_ACTION_NEEDED,"Insulation is stable and surface dust does not block cooling.",EASY
+ID-035,INSP-026,MONITOR,"Transformer follow-up shows improvement but remains near the thermal monitoring threshold.",MEDIUM
+ID-036,INSP-027,REQUIRES_WORK_ORDER,"Progressive belt-edge fraying needs planned correction before failure.",MEDIUM
+ID-037,INSP-030,NO_ACTION_NEEDED,"The backup compressor is stable under unloaded and loaded checks.",EASY
+ID-038,INSP-034,MONITOR,"Higher CNC way-oil consumption needs observation despite no visible leak.",MEDIUM
+ID-039,INSP-035,REQUIRES_WORK_ORDER,"Repeating bearing-frequency vibration at 11.6 mm/s requires immediate corrective attention.",EASY

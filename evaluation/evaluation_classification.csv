@@ -7,3 +7,25 @@ C-005,WO-025,ELECTRICAL,"Description: 'Acrid burning smell near the MCC panel wh
 C-006,WO-026,MECHANICAL,"Description: 'Press won't reach full tonnage. Drifts down when held under load.' (Implies a mechanical/hydraulic bypass or seal leak).",HARD
 C-007,WO-027,INSTRUMENTATION,"Description: 'Robot arm moving past its home limit switch without stopping.' (Limit switch failure is an instrumentation/control issue).",MEDIUM
 C-008,WO-028,GENERAL,"Description: 'Air line hissing near the packaging cell.' (Pneumatic leaks typically route to general/facilities unless severe).",EASY
+C-009,WO-001,MECHANICAL,"Scheduled vibration inspection on a centrifugal pump bearing train.",EASY
+C-010,WO-005,ELECTRICAL,"Motor casing heat is isolated from the separate pump-vibration complaint.",MEDIUM
+C-011,WO-006,ELECTRICAL,"A VFD overcurrent trip points to the drive and power-control domain.",EASY
+C-012,WO-010,INSTRUMENTATION,"The process gauge is stable while the transmitter indication jumps.",HARD
+C-013,WO-011,ELECTRICAL,"No power reaches the CNC main control panel.",EASY
+C-014,WO-040,MECHANICAL,"Conveyor slip under load indicates a belt or drive-train problem.",EASY
+C-015,WO-041,INSTRUMENTATION,"A snapped proximity device is a discrete sensing failure rather than belt damage.",MEDIUM
+C-016,WO-050,ELECTRICAL,"The repeated VFD overcurrent event concerns the electronic drive.",EASY
+C-017,WO-070,MECHANICAL,"A chilled-water pump leak localizes to the pump sealing or fluid path.",MEDIUM
+C-018,WO-071,MECHANICAL,"Cooling-water leakage is a mechanical seal or piping symptom.",EASY
+C-019,WO-080,MECHANICAL,"A hot compressor with cooling contamination needs machine-side diagnosis despite the temperature wording.",HARD
+C-020,WO-090,MECHANICAL,"The requested 6205 bearing is a rotating-equipment repair.",EASY
+C-021,WO-091,GENERAL,"Routine CNC way-oil top-up is a general planned-maintenance task.",MEDIUM
+C-022,WO-092,MECHANICAL,"A snapped grid coupling is a mechanical power-transmission failure.",EASY
+C-023,WO-093,INSTRUMENTATION,"The conveyor stopping function depends on the failed limit sensing device.",MEDIUM
+C-024,WO-1007,MECHANICAL,"A seized conveyor roller and scraping sound indicate bearing or roller mechanics.",MEDIUM
+C-025,WO-1011,ELECTRICAL,"The pump motor overheating finding is separate from a bearing-vibration finding.",HARD
+C-026,WO-1022,MECHANICAL,"Belt slipping under load is a conveyor mechanical condition.",EASY
+C-027,WO-1046,ELECTRICAL,"The CP-401 motor heat event is an electrical motor condition.",MEDIUM
+C-028,WO-1054,MECHANICAL,"A seized roller is not resolved by the nearby conveyor control hardware.",HARD
+C-029,WO-1062,MECHANICAL,"Elevated vibration on the standby pump indicates rotating-equipment degradation.",MEDIUM
+C-030,WO-1115,MECHANICAL,"A mechanical seal leak on a centrifugal pump is a fluid-mechanical repair.",EASY

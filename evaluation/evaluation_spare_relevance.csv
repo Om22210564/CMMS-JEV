@@ -4,3 +4,28 @@ SR-011,WO-090,P-103,NOT_RELEVANT,"WO: 'Replace 6205 bearing'. Part: '6305-2RS Se
 SR-012,WO-091,P-501,RELEVANT,"WO: 'Top up way oil on CNC'. Part: 'AW68 Hydraulic Oil' (Semantic knowledge: AW68 is often used as machine lubricant/way oil).",MEDIUM
 SR-013,WO-092,P-1201,NOT_RELEVANT,"WO: 'Fix snapped grid coupling on CP-400'. Part: 'L90 Jaw Coupling Element' (Both are couplings but jaw and grid are completely different mechanical types).",HARD
 SR-014,WO-093,P-301,RELEVANT,"WO: 'Replace snapped limit switch on conveyor'. Part: '12mm Proximity Sensor' (Semantic knowledge: proximity sensors are used interchangeably with limit switches in modern automation).",HARD
+SR-015,WO-002,P-102,RELEVANT,"The CP-400 vibration fault concerns its CM-500 bearing train and the 6205 bearing is compatible.",EASY
+SR-016,WO-002,P-103,NOT_RELEVANT,"The 6305 bearing is for the CM-600 variant rather than the CP-400 CM-500 pump.",HARD
+SR-017,WO-005,P-1301,RELEVANT,"A cooling fan is relevant to a motor-temperature complaint after electrical checks.",MEDIUM
+SR-018,WO-005,P-601,NOT_RELEVANT,"A mechanical seal kit addresses pump leakage rather than isolated motor temperature.",MEDIUM
+SR-019,WO-006,P-1302,RELEVANT,"The replacement keypad is compatible with the VFD-10K drive reporting the fault.",EASY
+SR-020,WO-006,P-202,NOT_RELEVANT,"An air-compressor intake filter does not address a spindle VFD overcurrent trip.",EASY
+SR-021,WO-010,P-302,RELEVANT,"The pressure transmitter cartridge matches the erratic PT-01 indication.",EASY
+SR-022,WO-010,P-301,NOT_RELEVANT,"A conveyor proximity sensor is unrelated to a compressor pressure transmitter signal.",HARD
+SR-023,WO-012,P-801,RELEVANT,"The pneumatic solenoid valve is relevant to the leaking packaging manifold.",EASY
+SR-024,WO-012,P-802,NOT_RELEVANT,"A cylinder is plausible pneumatic hardware but the reported leak is localized to the manifold valve.",HARD
+SR-025,WO-021,P-201,RELEVANT,"The HPU-200 compatibility record supports the hydraulic return filter for the fluid leak context.",EASY
+SR-026,WO-021,P-1401,RELEVANT,"An O-ring assortment is a reasonable containment material for the hydraulic leak path.",MEDIUM
+SR-027,WO-022,P-401,NOT_RELEVANT,"A VFD fuse is not established by a conveyor motor-overheating symptom without a drive fault finding.",HARD
+SR-028,WO-025,P-402,RELEVANT,"A contactor is relevant to heat and burning smell at the MCC panel.",EASY
+SR-029,WO-040,P-701,RELEVANT,"The A42 belt is compatible with the MT-Belt-X conveyor slipping under load.",EASY
+SR-030,WO-040,P-301,NOT_RELEVANT,"A proximity sensor does not correct a belt traction problem.",MEDIUM
+SR-031,WO-041,P-301,RELEVANT,"The snapped conveyor proximity device matches the replacement sensor.",EASY
+SR-032,WO-070,P-602,RELEVANT,"The CM-600 seal kit matches the leaking CP-402 pump model.",EASY
+SR-033,WO-071,P-601,RELEVANT,"The CM-500 seal kit matches the leaking CP-400 pump model.",EASY
+SR-034,WO-080,P-202,RELEVANT,"The compressor contamination context makes the intake filter relevant.",MEDIUM
+SR-035,WO-080,P-1301,NOT_RELEVANT,"A motor cooling fan is not supported by the compressor cooling-contamination evidence.",HARD
+SR-036,WO-092,P-1202,RELEVANT,"The grid coupling hub matches the snapped grid coupling description.",EASY
+SR-037,WO-092,P-1201,NOT_RELEVANT,"A jaw element and a grid coupling are different transmission designs.",HARD
+SR-038,WO-091,P-501,RELEVANT,"AW68 oil is the existing planned lubricant for CNC way-oil service.",MEDIUM
+SR-039,WO-093,P-301,RELEVANT,"The proximity sensor is relevant to the snapped conveyor limit device.",MEDIUM

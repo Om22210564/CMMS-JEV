@@ -5,3 +5,27 @@ D-012,WO-050,WO-051,NOT_DUPLICATE,"WO-050: 'VFD-01 tripped on overcurrent.' (Jan
 D-013,WO-060,WO-061,DUPLICATE,"WO-060: 'Hydraulic press losing pressure.' WO-061: 'Press won't hold tonnage.' (Same asset, same time, completely different vocabulary meaning the same physical failure).",HARD
 D-014,WO-070,WO-071,NOT_DUPLICATE,"WO-070: 'Chilled water pump leaking.' WO-071: 'Cooling water pump leaking.' (Same problem, same time, DIFFERENT assets - CP-400 vs CP-402).",MEDIUM
 D-015,WO-080,WO-081,NOT_DUPLICATE,"WO-080: 'Main compressor running hot.' WO-081: 'Main compressor making loud knocking sound.' (Same asset, same time, but potentially distinct failures requiring different parts/skills).",HARD
+D-016,WO-002,WO-030,DUPLICATE,"Same CP-400 bearing-vibration symptom appears before the later corrective record is closed.",MEDIUM
+D-017,WO-030,WO-031,DUPLICATE,"Two CP-400 vibration reports were raised within minutes using different wording.",EASY
+D-018,WO-005,WO-1020,NOT_DUPLICATE,"Both mention a hot CP-400 motor but occur weeks apart and represent recurrence rather than a duplicate submission.",HARD
+D-019,WO-006,WO-050,DUPLICATE,"The VFD overcurrent fault is reported at the same timestamp for the same drive.",EASY
+D-020,WO-006,WO-051,NOT_DUPLICATE,"Identical VFD wording months later is a new recurrence.",MEDIUM
+D-021,WO-007,WO-040,NOT_DUPLICATE,"Both concern conveyor slip but were created on different maintenance cycles.",HARD
+D-022,WO-022,WO-040,NOT_DUPLICATE,"One is drive overheating and the other belt slip on the same conveyor.",HARD
+D-023,WO-022,WO-050,NOT_DUPLICATE,"Both contain trip language but belong to different assets and failure domains.",MEDIUM
+D-024,WO-023,WO-010,NOT_DUPLICATE,"Both involve an erratic indication but one is flow and the other pressure instrumentation.",HARD
+D-025,WO-024,WO-1007,NOT_DUPLICATE,"A whining drive end and a seized roller are related conveyor mechanics but distinct symptom reports on different assets.",MEDIUM
+D-026,WO-025,WO-1066,NOT_DUPLICATE,"The MCC burning-smell event and a later generic MCC record are not enough to establish the same fault.",HARD
+D-027,WO-040,WO-1054,NOT_DUPLICATE,"Belt slip and roller seizure on CONV-01 need different corrective actions.",HARD
+D-028,WO-041,WO-093,DUPLICATE,"Both describe the same snapped conveyor sensing function on CONV-01.",MEDIUM
+D-029,WO-070,WO-071,NOT_DUPLICATE,"The leak language is similar but CP-402 and CP-400 are different pumps.",EASY
+D-030,WO-080,WO-1036,NOT_DUPLICATE,"A later generic compressor record lacks enough symptom evidence to collapse it into the hot-running fault.",HARD
+D-031,WO-090,WO-002,NOT_DUPLICATE,"A bearing replacement task follows the vibration finding and is not a duplicate report.",MEDIUM
+D-032,WO-092,WO-071,NOT_DUPLICATE,"A coupling failure and a seal leak affect the same pump but separate components.",HARD
+D-033,WO-1007,WO-1088,NOT_DUPLICATE,"Seized rollers occur on different conveyors and should not be merged.",EASY
+D-034,WO-1011,WO-1020,NOT_DUPLICATE,"Motor heat at different dates may be recurring but is not a same-event duplicate.",MEDIUM
+D-035,WO-1022,WO-1097,NOT_DUPLICATE,"Conveyor-2 belt slip recurs months later.",MEDIUM
+D-036,WO-1035,WO-1050,NOT_DUPLICATE,"Transfer-line belt slips were raised on separate dates and are recurring demand.",MEDIUM
+D-037,WO-1046,WO-1071,NOT_DUPLICATE,"CP-401 motor-overheating reports are separated in time.",MEDIUM
+D-038,WO-1065,WO-002,NOT_DUPLICATE,"CP-400 vibration reports are separated by weeks and may indicate a progressing condition.",HARD
+D-039,WO-1115,WO-071,NOT_DUPLICATE,"Both are seal leaks but occur on different pump assets.",EASY

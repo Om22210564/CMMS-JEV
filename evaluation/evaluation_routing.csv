@@ -1,7 +1,31 @@
 case_id,input_wo_id,expected_decision,rationale,difficulty
-R-001,WO-002,TEAM-MECH,'Mechanical classification directly maps to the Mechanical Team handling rotating equipment.',EASY
-R-002,WO-005,TEAM-ELEC,'Electrical motor fault maps to Electrical Team.',EASY
+R-001,WO-002,TEAM-MECH,'Pump vibration and bearing-wear evidence identify a rotating-equipment problem.',EASY
+R-002,WO-005,TEAM-ELEC,'The isolated motor-temperature symptom points to the motor and drive domain.',EASY
 R-003,WO-080,TEAM-MECH,"A hot-running compressor can superficially resemble a motor-temperature issue. The compressor asset context together with cooling failure and contamination evidence indicate a machine cooling problem rather than an electrical supply fault.",HARD
 R-004,WO-027,TEAM-INST,"The robotic-arm asset can suggest a mechanical problem, but over-travel past a home limit is governed by position sensing and control feedback. The limit-switch symptom and sensor failure evidence outweigh the arm mechanism.",HARD
 R-005,WO-023,TEAM-INST,"Erratic SCADA flow values conflict with a physically steady cooling-water flow. The flow-meter asset and disagreement between indication and process condition localize the issue to measurement or control rather than water-moving equipment.",HARD
 R-006,WO-008,TEAM-MECH,"Pressure loss on a press could be interpreted as a reading problem, but reduced tonnage under load and a suspected seal leak point to the hydraulic power path. The press asset and load-dependent symptom distinguish it from an instrument fault.",HARD
+R-007,WO-001,TEAM-MECH,"Pump bearing vibration inspection belongs with rotating-equipment maintenance.",EASY
+R-008,WO-006,TEAM-ELEC,"The asset is a spindle VFD and the event is an overcurrent trip.",EASY
+R-009,WO-010,TEAM-INST,"A stable process gauge conflicts with the pressure transmitter signal.",HARD
+R-010,WO-011,TEAM-ELEC,"The CNC cannot start because its main control panel has no power.",EASY
+R-011,WO-012,TEAM-MECH,"The leak source is a pneumatic manifold rather than an electrical cabinet.",MEDIUM
+R-012,WO-022,TEAM-ELEC,"Trip timing and motor heat on the conveyor drive outweigh the conveyor asset's mechanical surface cues.",HARD
+R-013,WO-024,TEAM-MECH,"Whining at a conveyor drive end is rotating hardware evidence.",MEDIUM
+R-014,WO-025,TEAM-ELEC,"Acrid heat at an MCC during line start is power-distribution evidence.",EASY
+R-015,WO-041,TEAM-INST,"The failed proximity device governs position feedback rather than belt motion.",MEDIUM
+R-016,WO-050,TEAM-ELEC,"Overcurrent at the VFD is a drive-panel fault.",EASY
+R-017,WO-070,TEAM-MECH,"The chilled-water pump leak concerns its sealing and fluid path.",MEDIUM
+R-018,WO-080,TEAM-MECH,"Compressor heat can mislead toward electrical work but cooling contamination points to the machine system.",HARD
+R-019,WO-090,TEAM-MECH,"Bearing replacement on a pump is a rotating-equipment task.",EASY
+R-020,WO-091,TEAM-GEN,"Way-oil replenishment is routine planned maintenance rather than a breakdown specialty.",MEDIUM
+R-021,WO-092,TEAM-MECH,"A snapped grid coupling is a mechanical transmission component.",EASY
+R-022,WO-093,TEAM-INST,"The defect is a conveyor limit sensing device.",MEDIUM
+R-023,WO-1007,TEAM-MECH,"A seized roller and scraping noise identify the roller bearing system.",MEDIUM
+R-024,WO-1011,TEAM-ELEC,"The evidence concerns motor temperature rather than pump vibration.",HARD
+R-025,WO-1022,TEAM-MECH,"Belt slip under load is a conveyor mechanical problem.",EASY
+R-026,WO-1046,TEAM-ELEC,"The CP-401 motor heat finding belongs to the electrical motor domain.",MEDIUM
+R-027,WO-1054,TEAM-MECH,"A roller seizure is a mechanical fault despite conveyor automation context.",HARD
+R-028,WO-1062,TEAM-MECH,"Pump vibration indicates rotating-equipment attention.",EASY
+R-029,WO-1071,TEAM-ELEC,"Motor overheating is an electrical maintenance condition.",MEDIUM
+R-030,WO-1115,TEAM-MECH,"A mechanical seal leak requires pump mechanical repair.",EASY

@@ -2,3 +2,30 @@ case_id,item_id,expected_decision,rationale,difficulty
 REP-001,P-102,REQUIRES_ATTENTION,'QOH (2) < Reorder (5). Active WO-002 demand. Critical asset.',HARD
 REP-002,P-202,MONITOR,'QOH (8) > Reorder (6). But 2 reserved for MR-003 (available = 6). Borderline monitor.',MEDIUM
 REP-003,P-401,HEALTHY,'QOH (50) >> Reorder (20). No risk.',EASY
+REP-004,P-101,HEALTHY,"QOH 15 exceeds reorder level 10 with no active request pressure.",EASY
+REP-005,P-103,HEALTHY,"QOH 12 remains above reorder level 8 after the existing received order.",EASY
+REP-006,P-104,HEALTHY,"Generic bearing stock is 20 against a reorder level of 10.",EASY
+REP-007,P-201,REQUIRES_ATTENTION,"QOH 3 is below reorder level 12 and two approved HPU demands total 7 filters.",HARD
+REP-008,P-301,MONITOR,"QOH 8 is above reorder level 3 but two approved conveyor sensor requests create shared demand.",MEDIUM
+REP-009,P-302,REQUIRES_ATTENTION,"Critical transmitter cartridge QOH is 1 below reorder level 2 while an approved request needs 2.",HARD
+REP-010,P-402,REQUIRES_ATTENTION,"Critical contactor QOH is 4 with two approved requests totaling 4 units.",HARD
+REP-011,P-501,HEALTHY,"Hydraulic oil QOH 200 remains well above reorder level 100 after planned demand.",EASY
+REP-012,P-502,HEALTHY,"Grease QOH 45 exceeds reorder level 20 despite routine PM consumption.",EASY
+REP-013,P-601,REQUIRES_ATTENTION,"Critical CM-500 seal kits have QOH 3 with reservation 1 and multiple approved seal demands.",HARD
+REP-014,P-602,MONITOR,"CM-600 seal-kit QOH 5 is above reorder level 2 but an approved leak repair needs 2.",MEDIUM
+REP-015,P-701,REQUIRES_ATTENTION,"Available belt stock is 10 after reservation and approved conveyor demand totals 5 units.",HARD
+REP-016,P-702,HEALTHY,"B50 belt QOH 8 is above reorder level 6 with no linked demand.",EASY
+REP-017,P-801,HEALTHY,"Pneumatic valve QOH 15 remains above reorder level 8 after the approved manifold request.",MEDIUM
+REP-018,P-802,REQUIRES_ATTENTION,"Cylinder QOH equals reorder level 2 and one approved request would leave only one unit.",HARD
+REP-019,P-901,HEALTHY,"Cable QOH 500 is comfortably above reorder level 200.",EASY
+REP-020,P-902,HEALTHY,"Industrial Ethernet cable QOH 300 exceeds reorder level 100.",EASY
+REP-021,P-1001,HEALTHY,"Control relay QOH 25 remains above reorder level 15.",EASY
+REP-022,P-1002,HEALTHY,"Critical power supply QOH 6 is double its reorder level with no current material demand.",MEDIUM
+REP-023,P-1101,HEALTHY,"Gear oil QOH 100 remains above reorder level 40 despite a 20-litre approved request.",MEDIUM
+REP-024,P-1102,HEALTHY,"Brake cleaner QOH 24 is above reorder level 12 and has no committed demand.",EASY
+REP-025,P-1201,HEALTHY,"Jaw coupling elements QOH 8 exceeds reorder level 4.",EASY
+REP-026,P-1202,REQUIRES_ATTENTION,"Critical grid coupling hub QOH 1 is below reorder level 2 and has a 21-day lead time.",HARD
+REP-027,P-1301,REQUIRES_ATTENTION,"Motor-fan QOH 4 faces approved shared demand of 3 and would fall below reorder level 2.",HARD
+REP-028,P-1302,REQUIRES_ATTENTION,"Critical VFD keypad QOH 2 faces two approved requests and has a 14-day lead time.",HARD
+REP-029,P-1401,MONITOR,"O-ring kit QOH 5 is above reorder level 3 but an approved hydraulic leak request needs 3 kits.",MEDIUM
+REP-030,P-1402,HEALTHY,"Industrial wipes QOH 50 remains well above reorder level 20.",EASY
