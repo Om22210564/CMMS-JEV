@@ -21,12 +21,19 @@ def assess_spare_relevance(context: dict[str, Any]) -> RelevanceDecision:
         instructions="Decide whether the requested item is relevant to the maintenance need.",
         criteria=SPARE_CRITERIA,
     )
-    request = context["material_request"]
+    request = context.get("material_request")
+    if request:
+        evidence = {"request_id": request["request_id"], "item_id": request["item_id"]}
+    else:
+        evidence = {
+            "work_order_id": context["work_order_context"]["work_order"]["work_order_id"],
+            "item_id": context["candidate_item"]["item_id"],
+        }
     return RelevanceDecision(
         is_relevant=result.decision == "RELEVANT",
         confidence=result.confidence,
         question=result.question,
         model=result.model,
         rationale="Jev returned a constrained relevance decision from the request and CMMS context.",
-        evidence={"request_id": request["request_id"], "item_id": request["item_id"]},
+        evidence=evidence,
     )

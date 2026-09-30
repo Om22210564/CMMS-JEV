@@ -13,6 +13,8 @@ from .decisions.replenishment import REPLENISHMENT_CRITERIA, assess_replenishmen
 from .decisions.routing import ROUTING_CRITERIA, route_work_order
 from .decisions.spare import SPARE_CRITERIA, assess_spare_relevance
 from .jev import JevCallError, JevConfigurationError
+from .evaluation import EVALUATION_FILES, run_evaluation
+from .workflows.demo import run_cp400_demo
 
 
 def main() -> int:
@@ -43,9 +45,27 @@ def main() -> int:
     replenish = subparsers.add_parser("replenish", help="Assess inventory attention with Jev.")
     replenish.add_argument("item_id")
     add_dry_run(replenish)
+    evaluate = subparsers.add_parser("evaluate", help="Run one live evaluation dataset.")
+    evaluate.add_argument("decision", choices=sorted(EVALUATION_FILES))
+    demo = subparsers.add_parser("demo", help="Run a read-only CMMS decision workflow demo.")
+    demo.add_argument("scenario", choices=["cp-400"])
     args = parser.parse_args()
 
     repository = CMMSRepository()
+    if args.command == "evaluate":
+        try:
+            summary = run_evaluation(args.decision, repository)
+        except (EntityNotFoundError, JevConfigurationError, JevCallError, ValueError) as exc:
+            parser.error(str(exc))
+        print(json.dumps(summary.to_dict(), indent=2))
+        return 0
+    if args.command == "demo":
+        try:
+            demo_result = run_cp400_demo(repository)
+        except (EntityNotFoundError, JevConfigurationError, JevCallError) as exc:
+            parser.error(str(exc))
+        print(json.dumps(demo_result, indent=2))
+        return 0
     try:
         if args.command == "classify":
             context = repository.work_order_context(args.work_order_id)

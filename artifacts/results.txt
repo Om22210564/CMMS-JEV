@@ -1,0 +1,451 @@
+# Phase 3 live Jev results
+
+## CP-400 workflow demo
+{
+  "scenario": "CP-400 cooling-water pump",
+  "mutates_data": false,
+  "steps": [
+    {
+      "name": "inspection_disposition",
+      "decision": {
+        "decision": "REQUIRES_WORK_ORDER",
+        "confidence": 1.0,
+        "question": "inspection_disposition",
+        "model": null,
+        "rationale": "Jev returned a constrained choice; inspect the linked CMMS entities for the deterministic evidence context.",
+        "evidence": {
+          "inspection_id": "INSP-001",
+          "asset_id": "CP-400"
+        }
+      },
+      "workflow": {
+        "action": "FLAG_CORRECTIVE_WORK_ORDER_REQUIRED",
+        "accepted": true,
+        "decision": "REQUIRES_WORK_ORDER",
+        "confidence": 1.0,
+        "evidence": {
+          "inspection_id": "INSP-001",
+          "asset_id": "CP-400"
+        },
+        "reason": "Inspection disposition maps to a deterministic non-mutating CMMS action."
+      }
+    },
+    {
+      "name": "work_order_classification",
+      "decision": {
+        "decision": "MECHANICAL",
+        "confidence": 1.0,
+        "question": "classification",
+        "model": null,
+        "rationale": "Jev returned a constrained choice; inspect the linked CMMS entities for the deterministic evidence context.",
+        "evidence": {
+          "work_order_id": "WO-002",
+          "asset_id": "CP-400"
+        }
+      },
+      "workflow": {
+        "action": "CLASSIFY_WORK_ORDER",
+        "accepted": true,
+        "decision": "MECHANICAL",
+        "confidence": 1.0,
+        "evidence": {
+          "work_order_id": "WO-002",
+          "asset_id": "CP-400"
+        },
+        "reason": "Validated constrained classification is available for the work-order workflow."
+      }
+    },
+    {
+      "name": "work_order_routing",
+      "decision": {
+        "decision": "TEAM-MECH",
+        "confidence": 1.0,
+        "question": "routing",
+        "model": null,
+        "rationale": "Jev returned a constrained choice; inspect the linked CMMS entities for the deterministic evidence context.",
+        "evidence": {
+          "work_order_id": "WO-002",
+          "asset_id": "CP-400"
+        }
+      },
+      "workflow": {
+        "action": "PROPOSE_TEAM_ASSIGNMENT",
+        "accepted": true,
+        "decision": "TEAM-MECH",
+        "confidence": 1.0,
+        "evidence": {
+          "work_order_id": "WO-002",
+          "asset_id": "CP-400"
+        },
+        "reason": "Selected maintenance team is present in the CMMS team master."
+      }
+    },
+    {
+      "name": "spare_part_relevance",
+      "decision": {
+        "is_relevant": true,
+        "confidence": 1.0,
+        "question": "spare_relevance",
+        "model": null,
+        "rationale": "Jev returned a constrained relevance decision from the request and CMMS context.",
+        "evidence": {
+          "request_id": "MR-001",
+          "item_id": "P-102"
+        }
+      },
+      "workflow": {
+        "action": "ACCEPT_MATERIAL_REQUEST",
+        "accepted": true,
+        "decision": "RELEVANT",
+        "confidence": 1.0,
+        "evidence": {
+          "request_id": "MR-001",
+          "item_id": "P-102"
+        },
+        "reason": "Only relevant spares progress without planner review."
+      }
+    },
+    {
+      "name": "replenishment_attention",
+      "decision": {
+        "decision": "REQUIRES_ATTENTION",
+        "confidence": 0.77,
+        "question": "replenishment_attention",
+        "model": null,
+        "rationale": "Jev returned a constrained choice; inspect the linked CMMS entities for the deterministic evidence context.",
+        "evidence": {
+          "item_id": "P-102"
+        }
+      },
+      "workflow": {
+        "action": "RAISE_REPLENISHMENT_ATTENTION",
+        "accepted": false,
+        "decision": "REQUIRES_ATTENTION",
+        "confidence": 0.77,
+        "evidence": {
+          "item_id": "P-102"
+        },
+        "reason": "Jev attention level is translated into a deterministic planner action."
+      }
+    },
+    {
+      "name": "duplicate_detection",
+      "decision": {
+        "is_duplicate": true,
+        "matched_work_order_id": "WO-031",
+        "confidence": 1.0,
+        "question": "duplicate_detection",
+        "model": null,
+        "rationale": "Jev returned a constrained duplicate decision from the two CMMS contexts.",
+        "evidence": {
+          "primary_work_order_id": "WO-030",
+          "candidate_work_order_id": "WO-031"
+        }
+      },
+      "workflow": {
+        "action": "FLAG_POSSIBLE_DUPLICATE",
+        "accepted": true,
+        "decision": "DUPLICATE",
+        "confidence": 1.0,
+        "evidence": {
+          "primary_work_order_id": "WO-030",
+          "candidate_work_order_id": "WO-031"
+        },
+        "reason": "Duplicate is above the deterministic review threshold."
+      }
+    }
+  ]
+}
+
+## Classification evaluation
+{
+  "decision": "classification",
+  "total_cases": 30,
+  "correct": 28,
+  "incorrect": 2,
+  "accuracy": 0.9333333333333333,
+  "by_difficulty": {
+    "EASY": {
+      "total": 11,
+      "correct": 10,
+      "incorrect": 1,
+      "accuracy": 0.9090909090909091
+    },
+    "HARD": {
+      "total": 7,
+      "correct": 7,
+      "incorrect": 0,
+      "accuracy": 1.0
+    },
+    "MEDIUM": {
+      "total": 12,
+      "correct": 11,
+      "incorrect": 1,
+      "accuracy": 0.9166666666666666
+    }
+  },
+  "representative_failures": [
+    {
+      "case_id": "C-008",
+      "expected": "GENERAL",
+      "actual": "MECHANICAL",
+      "difficulty": "EASY"
+    },
+    {
+      "case_id": "C-021",
+      "expected": "GENERAL",
+      "actual": "MECHANICAL",
+      "difficulty": "MEDIUM"
+    }
+  ]
+}
+
+## Routing evaluation
+{
+  "decision": "routing",
+  "total_cases": 30,
+  "correct": 30,
+  "incorrect": 0,
+  "accuracy": 1.0,
+  "by_difficulty": {
+    "EASY": {
+      "total": 12,
+      "correct": 12,
+      "incorrect": 0,
+      "accuracy": 1.0
+    },
+    "HARD": {
+      "total": 9,
+      "correct": 9,
+      "incorrect": 0,
+      "accuracy": 1.0
+    },
+    "MEDIUM": {
+      "total": 9,
+      "correct": 9,
+      "incorrect": 0,
+      "accuracy": 1.0
+    }
+  },
+  "representative_failures": []
+}
+
+## Duplicate-detection evaluation
+{
+  "decision": "duplicate_detection",
+  "total_cases": 30,
+  "correct": 25,
+  "incorrect": 5,
+  "accuracy": 0.8333333333333334,
+  "by_difficulty": {
+    "EASY": {
+      "total": 6,
+      "correct": 6,
+      "incorrect": 0,
+      "accuracy": 1.0
+    },
+    "HARD": {
+      "total": 12,
+      "correct": 10,
+      "incorrect": 2,
+      "accuracy": 0.8333333333333334
+    },
+    "MEDIUM": {
+      "total": 12,
+      "correct": 9,
+      "incorrect": 3,
+      "accuracy": 0.75
+    }
+  },
+  "representative_failures": [
+    {
+      "case_id": "D-018",
+      "expected": "NOT_DUPLICATE",
+      "actual": "DUPLICATE",
+      "difficulty": "HARD"
+    },
+    {
+      "case_id": "D-020",
+      "expected": "NOT_DUPLICATE",
+      "actual": "DUPLICATE",
+      "difficulty": "MEDIUM"
+    },
+    {
+      "case_id": "D-028",
+      "expected": "DUPLICATE",
+      "actual": "NOT_DUPLICATE",
+      "difficulty": "MEDIUM"
+    },
+    {
+      "case_id": "D-031",
+      "expected": "NOT_DUPLICATE",
+      "actual": "DUPLICATE",
+      "difficulty": "MEDIUM"
+    },
+    {
+      "case_id": "D-038",
+      "expected": "NOT_DUPLICATE",
+      "actual": "DUPLICATE",
+      "difficulty": "HARD"
+    }
+  ]
+}
+
+## Inspection-disposition evaluation
+{
+  "decision": "inspection_disposition",
+  "total_cases": 30,
+  "correct": 29,
+  "incorrect": 1,
+  "accuracy": 0.9666666666666667,
+  "by_difficulty": {
+    "EASY": {
+      "total": 13,
+      "correct": 13,
+      "incorrect": 0,
+      "accuracy": 1.0
+    },
+    "HARD": {
+      "total": 8,
+      "correct": 8,
+      "incorrect": 0,
+      "accuracy": 1.0
+    },
+    "MEDIUM": {
+      "total": 9,
+      "correct": 8,
+      "incorrect": 1,
+      "accuracy": 0.8888888888888888
+    }
+  },
+  "representative_failures": [
+    {
+      "case_id": "ID-016",
+      "expected": "MONITOR",
+      "actual": "REQUIRES_WORK_ORDER",
+      "difficulty": "MEDIUM"
+    }
+  ]
+}
+
+## Spare-relevance evaluation
+{
+  "decision": "spare_relevance",
+  "total_cases": 30,
+  "correct": 20,
+  "incorrect": 10,
+  "accuracy": 0.6666666666666666,
+  "by_difficulty": {
+    "EASY": {
+      "total": 13,
+      "correct": 11,
+      "incorrect": 2,
+      "accuracy": 0.8461538461538461
+    },
+    "HARD": {
+      "total": 9,
+      "correct": 4,
+      "incorrect": 5,
+      "accuracy": 0.4444444444444444
+    },
+    "MEDIUM": {
+      "total": 8,
+      "correct": 5,
+      "incorrect": 3,
+      "accuracy": 0.625
+    }
+  },
+  "representative_failures": [
+    {
+      "case_id": "SR-012",
+      "expected": "RELEVANT",
+      "actual": "NOT_RELEVANT",
+      "difficulty": "MEDIUM"
+    },
+    {
+      "case_id": "SR-013",
+      "expected": "NOT_RELEVANT",
+      "actual": "RELEVANT",
+      "difficulty": "HARD"
+    },
+    {
+      "case_id": "SR-014",
+      "expected": "RELEVANT",
+      "actual": "NOT_RELEVANT",
+      "difficulty": "HARD"
+    },
+    {
+      "case_id": "SR-016",
+      "expected": "NOT_RELEVANT",
+      "actual": "RELEVANT",
+      "difficulty": "HARD"
+    },
+    {
+      "case_id": "SR-019",
+      "expected": "RELEVANT",
+      "actual": "NOT_RELEVANT",
+      "difficulty": "EASY"
+    }
+  ]
+}
+
+## Replenishment evaluation
+{
+  "decision": "replenishment",
+  "total_cases": 30,
+  "correct": 25,
+  "incorrect": 5,
+  "accuracy": 0.8333333333333334,
+  "by_difficulty": {
+    "EASY": {
+      "total": 13,
+      "correct": 13,
+      "incorrect": 0,
+      "accuracy": 1.0
+    },
+    "HARD": {
+      "total": 10,
+      "correct": 9,
+      "incorrect": 1,
+      "accuracy": 0.9
+    },
+    "MEDIUM": {
+      "total": 7,
+      "correct": 3,
+      "incorrect": 4,
+      "accuracy": 0.42857142857142855
+    }
+  },
+  "representative_failures": [
+    {
+      "case_id": "REP-002",
+      "expected": "MONITOR",
+      "actual": "REQUIRES_ATTENTION",
+      "difficulty": "MEDIUM"
+    },
+    {
+      "case_id": "REP-008",
+      "expected": "MONITOR",
+      "actual": "HEALTHY",
+      "difficulty": "MEDIUM"
+    },
+    {
+      "case_id": "REP-014",
+      "expected": "MONITOR",
+      "actual": "HEALTHY",
+      "difficulty": "MEDIUM"
+    },
+    {
+      "case_id": "REP-018",
+      "expected": "REQUIRES_ATTENTION",
+      "actual": "MONITOR",
+      "difficulty": "HARD"
+    },
+    {
+      "case_id": "REP-029",
+      "expected": "MONITOR",
+      "actual": "REQUIRES_ATTENTION",
+      "difficulty": "MEDIUM"
+    }
+  ]
+}

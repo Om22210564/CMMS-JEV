@@ -58,6 +58,9 @@ class CMMSRepository:
         )
         asset = self._record(self.load("assets.csv"), "asset_id", inspection["asset_id"])
         context: dict[str, Any] = {"inspection": inspection, "asset": asset}
+        history = self.load("maintenance_history.csv")
+        asset_history = history.loc[history["asset_id"] == inspection["asset_id"]]
+        context["recent_maintenance_history"] = asset_history.tail(5).to_dict("records")
         if inspection["pm_execution_id"]:
             execution = self._record(
                 self.load("pm_executions.csv"),
@@ -79,6 +82,27 @@ class CMMSRepository:
         if request["work_order_id"]:
             context["work_order_context"] = self.work_order_context(request["work_order_id"])
         return context
+
+    def spare_candidate_context(
+        self, work_order_id: str, candidate_item_id: str
+    ) -> dict[str, Any]:
+        """Build a read-only work-order-to-candidate-spare comparison context."""
+        work_order_context = self.work_order_context(work_order_id)
+        item = self._record(
+            self.load("inventory_items.csv"), "item_id", candidate_item_id
+        )
+        asset = work_order_context["asset"]
+        compatibility = self.load("asset_part_compatibility.csv")
+        matches = compatibility.loc[
+            (compatibility["item_id"] == candidate_item_id)
+            & (compatibility["asset_type"] == asset["asset_type"])
+            & (compatibility["asset_model"] == asset["model"])
+        ]
+        return {
+            "work_order_context": work_order_context,
+            "candidate_item": item,
+            "compatibility_evidence": matches.to_dict("records"),
+        }
 
     def replenishment_context(self, item_id: str) -> dict[str, Any]:
         item = self._record(self.load("inventory_items.csv"), "item_id", item_id)
