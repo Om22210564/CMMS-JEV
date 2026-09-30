@@ -1,3 +1,7 @@
 case_id,input_wo_id,expected_decision,rationale,difficulty
 R-001,WO-002,TEAM-MECH,'Mechanical classification directly maps to the Mechanical Team handling rotating equipment.',EASY
 R-002,WO-005,TEAM-ELEC,'Electrical motor fault maps to Electrical Team.',EASY
+R-003,WO-080,TEAM-MECH,"A hot-running compressor can superficially resemble a motor-temperature issue. The compressor asset context together with cooling failure and contamination evidence indicate a machine cooling problem rather than an electrical supply fault.",HARD
+R-004,WO-027,TEAM-INST,"The robotic-arm asset can suggest a mechanical problem, but over-travel past a home limit is governed by position sensing and control feedback. The limit-switch symptom and sensor failure evidence outweigh the arm mechanism.",HARD
+R-005,WO-023,TEAM-INST,"Erratic SCADA flow values conflict with a physically steady cooling-water flow. The flow-meter asset and disagreement between indication and process condition localize the issue to measurement or control rather than water-moving equipment.",HARD
+R-006,WO-008,TEAM-MECH,"Pressure loss on a press could be interpreted as a reading problem, but reduced tonnage under load and a suspected seal leak point to the hydraulic power path. The press asset and load-dependent symptom distinguish it from an instrument fault.",HARD
