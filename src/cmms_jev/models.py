@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field, replace
 from typing import Mapping
 
 
@@ -16,6 +16,8 @@ class DecisionResult:
     confidence: float
     question: str
     model: str | None = None
+    rationale: str | None = None
+    evidence: dict[str, str] = field(default_factory=dict)
 
     def validate(self, criteria: Mapping[str, str]) -> "DecisionResult":
         if self.decision not in criteria:
@@ -28,5 +30,43 @@ class DecisionResult:
             )
         return self
 
-    def to_dict(self) -> dict[str, str | float | None]:
+    def to_dict(self) -> dict[str, object]:
+        return asdict(self)
+
+    def with_evidence(self, **evidence: str) -> "DecisionResult":
+        """Attach deterministic context identifiers without changing Jev's choice."""
+        return replace(
+            self,
+            rationale=(
+                "Jev returned a constrained choice; inspect the linked CMMS "
+                "entities for the deterministic evidence context."
+            ),
+            evidence=evidence,
+        )
+
+
+@dataclass(frozen=True)
+class DuplicateDecision:
+    is_duplicate: bool
+    matched_work_order_id: str | None
+    confidence: float
+    question: str
+    model: str | None = None
+    rationale: str | None = None
+    evidence: dict[str, str] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, object]:
+        return asdict(self)
+
+
+@dataclass(frozen=True)
+class RelevanceDecision:
+    is_relevant: bool
+    confidence: float
+    question: str
+    model: str | None = None
+    rationale: str | None = None
+    evidence: dict[str, str] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, object]:
         return asdict(self)

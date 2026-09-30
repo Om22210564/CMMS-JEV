@@ -17,7 +17,7 @@ CLASSIFICATION_CRITERIA = {
 
 
 def classify_work_order(context: dict[str, Any]) -> DecisionResult:
-    return decide_choice(
+    result = decide_choice(
         state=context,
         question="classification",
         instructions=(
@@ -25,4 +25,8 @@ def classify_work_order(context: dict[str, Any]) -> DecisionResult:
             "Use the most specific supported maintenance domain."
         ),
         criteria=CLASSIFICATION_CRITERIA,
+    )
+    return result.with_evidence(
+        work_order_id=context["work_order"]["work_order_id"],
+        asset_id=context["asset"]["asset_id"],
     )
